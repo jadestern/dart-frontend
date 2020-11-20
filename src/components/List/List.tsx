@@ -26,19 +26,20 @@ const List: FC<IProps> = ({}) => {
 
   return (
     <div>
-      {list.map((item: EstimatedPrice, index: number) => {
-        return (
-          <div key={index.toString()}>
-            <div>종목: {item.name}</div>
-            <div>종가: {item.close}</div>
-            <div>매수가: {item.buy}</div>
-            <div>종가 매수가 차이(%): {item.diff_percent}</div>
-            <div>50% 매도가: {item.sell_half}</div>
-            <div>100% 매도가: {item.sell_all}</div>
-            <br />
-          </div>
-        );
-      })}
+      {list.length &&
+        list.map((item: EstimatedPrice, index: number) => {
+          return (
+            <div key={index.toString()}>
+              <div>종목: {item.name}</div>
+              <div>종가: {item.close}</div>
+              <div>매수가: {item.buy}</div>
+              <div>종가 매수가 차이(%): {item.diff_percent}</div>
+              <div>50% 매도가: {item.sell_half}</div>
+              <div>100% 매도가: {item.sell_all}</div>
+              <br />
+            </div>
+          );
+        })}
     </div>
   );
 };
