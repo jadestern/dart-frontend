@@ -26,7 +26,8 @@ const List: FC<IProps> = ({}) => {
 
   return (
     <div>
-      {list.length &&
+      {list &&
+        list.length &&
         list.map((item: EstimatedPrice, index: number) => {
           return (
             <div key={index.toString()}>
