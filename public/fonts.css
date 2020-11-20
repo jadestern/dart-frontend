@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local("IBM Plex Sans KR Thin"), local("IBMPlexSansKR-Thin"), url("fonts/IBMPlexSansKR-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 200;
+  src: local("IBM Plex Sans KR ExtraLight"), local("IBMPlexSansKR-ExtraLight"), url("fonts/IBMPlexSansKR-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local("IBM Plex Sans KR Light"), local("IBMPlexSansKR-Light"), url("fonts/IBMPlexSansKR-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM Plex Sans KR"), local("IBMPlexSansKR"), url("fonts/IBMPlexSansKR-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 450;
+  src: local("IBM Plex Sans KR"), local("IBMPlexSansKR-Text"), url("fonts/IBMPlexSansKR-Text.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("IBM Plex Sans KR Medium"), local("IBMPlexSansKR-Medium"), url("fonts/IBMPlexSansKR-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 600;
+  src: local("IBM Plex Sans KR"), local("IBMPlexSansKR"), url("fonts/IBMPlexSansKR-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("IBM Plex Sans KR Bold"), local("IBMPlexSansKR-Bold"), url("fonts/IBMPlexSansKR-Bold.woff2") format("woff2");
+}
