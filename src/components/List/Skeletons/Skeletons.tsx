@@ -7,14 +7,14 @@ const Skeletons: FC<IProps> = ({}) => {
   const Item = () => {
     return (
       <div className="pb-4">
-        <Skeleton animation="wave" variant="rect" height={100} />
+        <Skeleton animation="wave" variant="rect" height={169.31} />
       </div>
     );
   };
 
   return (
     <div>
-      {new Array(5).fill(true).map((_: boolean, index: number) => {
+      {new Array(10).fill(true).map((_: boolean, index: number) => {
         return <Item key={index.toString()} />;
       })}
     </div>
