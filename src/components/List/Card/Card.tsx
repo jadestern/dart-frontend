@@ -67,10 +67,10 @@ const Card: FC<IProps> = ({
           </div>
         </div>
         <div className="flex justify-between mt-4">
-          <Typography className="flex items-center px-6" variant="body2">
+          <Typography className="flex items-center" variant="body2">
             매도가
           </Typography>
-          <div className="flex-grow pl-16">
+          <div className="flex-grow pl-6">
             <div className="flex justify-between flex-auto">
               <Typography>50%</Typography>
               <Typography color="textPrimary">
