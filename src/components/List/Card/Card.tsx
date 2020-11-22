@@ -48,6 +48,20 @@ const Card: FC<IProps> = ({
                   alt="FnGuide Logo"
                 />
               </a>
+              <a
+                className="w-5 h-5 flex justify-center items-center ml-3"
+                href={`https://m.stock.naver.com/item/main.nhn#/stocks/${stock_code.replace(
+                  /\D/g,
+                  ''
+                )}`}
+                target="_blank"
+              >
+                <img
+                  className="block w-full h-full"
+                  src="https://ssl.pstatic.net/imgstock/favicon.ico"
+                  alt="FnGuide Logo"
+                />
+              </a>
             </div>
           </div>
           <div>
