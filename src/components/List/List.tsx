@@ -19,7 +19,6 @@ const List: FC<IProps> = ({}) => {
     } = await Axios.get<GetListResponse>(
       `/.netlify/functions/getList?key=${process.env.REACT_APP_FAUNADB_SERVER_SECRET}`
     );
-    console.log(list);
     setList(list);
   };
 

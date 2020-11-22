@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'tailwindcss/tailwind.css';
+import './ga';
 import App from './App';
 
 ReactDOM.render(
