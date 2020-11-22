@@ -1,6 +1,8 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useMemo, useState } from 'react';
 import Axios from 'axios';
 import { EstimatedPrice } from '../../lambda/getList';
+import { Skeletons } from './Skeletons';
+import { Card } from './Card';
 
 export interface IProps {}
 
@@ -17,30 +19,31 @@ const List: FC<IProps> = ({}) => {
     } = await Axios.get<GetListResponse>(
       `/.netlify/functions/getList?key=${process.env.REACT_APP_FAUNADB_SERVER_SECRET}`
     );
+    console.log(list);
     setList(list);
   };
+
+  const loading = useMemo(() => {
+    return list.length === 0;
+  }, [list]);
 
   useEffect(() => {
     load();
   }, []);
 
   return (
-    <div>
-      {list &&
-        list.length &&
+    <div className="">
+      {loading ? (
+        <Skeletons />
+      ) : (
         list.map((item: EstimatedPrice, index: number) => {
           return (
-            <div key={index.toString()}>
-              <div>종목: {item.name}</div>
-              <div>종가: {item.close}</div>
-              <div>매수가: {item.buy}</div>
-              <div>종가 매수가 차이(%): {item.diff_percent}</div>
-              <div>50% 매도가: {item.sell_half}</div>
-              <div>100% 매도가: {item.sell_all}</div>
-              <br />
+            <div className="pb-4" key={index.toString()}>
+              <Card {...item} />
             </div>
           );
-        })}
+        })
+      )}
     </div>
   );
 };
