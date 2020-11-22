@@ -66,7 +66,7 @@ const Card: FC<IProps> = ({
           </div>
           <div>
             <div className="text-right">
-              <span>매수가: </span>
+              <span>매수추천가: </span>
               <Typography
                 color="secondary"
                 variant="subtitle1"
@@ -82,7 +82,7 @@ const Card: FC<IProps> = ({
         </div>
         <div className="flex justify-between mt-4">
           <Typography className="flex items-center" variant="body2">
-            매도가
+            매도추천가
           </Typography>
           <div className="flex-grow pl-6">
             <div className="flex justify-between flex-auto">
