@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useMemo, useState } from 'react';
 import Axios from 'axios';
 import { EstimatedPrice } from '../../lambda/getList';
-import { Skeletons } from './Skeletons';
+import Skeletons from './Skeleton';
 import { Card } from './Card';
 
 export interface IProps {}
