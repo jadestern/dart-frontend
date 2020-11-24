@@ -33,15 +33,18 @@ const List: FC<IProps> = ({}) => {
   return (
     <div className="">
       {loading ? (
-        <Skeletons />
+        <Skeletons count={10} />
       ) : (
-        list.map((item: EstimatedPrice, index: number) => {
-          return (
-            <div className="pb-4" key={index.toString()}>
-              <Card {...item} />
-            </div>
-          );
-        })
+        <>
+          {list.map((item: EstimatedPrice, index: number) => {
+            return (
+              <div className="pb-4" key={index.toString()}>
+                <Card ranking={index + 1} {...item} />
+              </div>
+            );
+          })}
+          <Skeletons count={3} />
+        </>
       )}
     </div>
   );

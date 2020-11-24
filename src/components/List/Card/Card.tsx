@@ -2,13 +2,17 @@ import React, { FC } from 'react';
 import MaterialCard from '@material-ui/core/Card';
 import MaterialCardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import Badge from '@material-ui/core/Badge';
 import { EstimatedPrice } from '../../../lambda/getList';
 import { getCurrencyKRW } from '../../../helper/currency';
 import calcDiffPercent from '../../../helper/calcDiffPercent';
 
-export interface IProps extends EstimatedPrice {}
+export interface IProps extends EstimatedPrice {
+  ranking: number;
+}
 
 const Card: FC<IProps> = ({
+  ranking,
   stock_code,
   name,
   close,
@@ -22,9 +26,23 @@ const Card: FC<IProps> = ({
       <MaterialCardContent>
         <div className="flex justify-between">
           <div className="flex flex-col items-baseline">
-            <Typography color="primary" variant="h6" gutterBottom>
-              {name}
-            </Typography>
+            <Badge
+              badgeContent={ranking}
+              color="primary"
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+            >
+              <Typography
+                className="pt-2"
+                color="primary"
+                variant="h6"
+                gutterBottom
+              >
+                {name}
+              </Typography>
+            </Badge>
             <div className="flex mt-2">
               <a
                 className="w-5 h-5 flex justify-center items-center"
@@ -64,7 +82,7 @@ const Card: FC<IProps> = ({
               </a>
             </div>
           </div>
-          <div>
+          <div className="pt-2">
             <div className="text-right">
               <span>매수추천가: </span>
               <Typography

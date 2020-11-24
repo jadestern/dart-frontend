@@ -3,8 +3,8 @@ import MaterialSkeleton from '@material-ui/lab/Skeleton';
 
 export interface IProps {}
 
-const Skeleton: FC<IProps> = ({}) => {
+const CardSkeleton: FC<IProps> = ({}) => {
   return <MaterialSkeleton animation="wave" variant="rect" height={169.31} />;
 };
 
-export default Skeleton;
+export default CardSkeleton;
